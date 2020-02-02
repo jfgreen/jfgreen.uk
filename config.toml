@@ -1,0 +1,7 @@
+title = "Friendly Engineering"
+base_url = "https://friendly.engineering"
+
+generate_rss = true
+
+[extra]
+author="James Green"

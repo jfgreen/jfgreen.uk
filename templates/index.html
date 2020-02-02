@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Friendly Engineering Blog">
+        <meta name="author" content="{{ config.extra.author }}">
+        <title>{{ config.title }}</title>
+        <link href="{{ get_url(path="rss.xml") }}" rel="alternate" type="application/rss+xml" title="{{ config.title }}" />
+	</head>
+    <body>
+        <header>
+            <h1>Friendly Engineering</h1>
+            <hr/>
+        <main>
+            <ul>
+            {% for post in section.pages %}
+                <li><a href="{{ post.permalink }}">{{ post.date | date(format="%Y-%m-%d") }} - {{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </main>
+        <footer>
+            <hr/>
+            <a href="https://twitter.com/j_f_green" target="_blank">@jfgreen</a>
+        </footer>
+    </body>
+</html>
