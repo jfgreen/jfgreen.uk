@@ -7,8 +7,6 @@ date = 2020-02-02
 draft=true
 +++
 
-# Why I like Data Engineering 
-
 A few years ago a colleague of mine explained to me how, when asked about his
 role, he would glibly respond with something along the lines of: "i do things
 with computers". At the time this sounded fairly reasonable. I too have fun
@@ -54,18 +52,65 @@ uncertainty. I wouldn't even suggest we necessarily need super sophisticated
 techniques to do so either. Never underestimate the power in having the right
 data in the right place, with even some super basic analysis.
 
-The above definition is perhaps very similar mission statement to data science,
-but I think that's OK given the highly complementary nature of these two roles.
-In fact, as a colleague of mine helpfully pointed out, if the act of
-"distilling data" is is orthogonal (i.e not exclusive to data engineers or
-scientists), then the role of the data engineer is about doing so with a focus
-on reliability, data quality and data availability. I agrees with this and
-think a key enabler for doing so is to bring all the practices we know and love
-about making high quality software to the realm of data. This includes things
-like...
 
-What I like about this definition is that is allows us to be quite imaginative
-in how we achieve it. For example:
+This definition is could also perhaps apply to data science, but I think that's
+OK given the highly complementary nature of these two roles. In fact, as a
+colleague of mine helpfully pointed out, if the act of "distilling data" is is
+orthogonal (i.e not exclusive to data engineers or scientists), then the role
+of the data engineer is about doing so with a focus on reliability, data
+quality and data availability. I agree with this and think a key enabler for
+doing so is to bring all the principals we know and love about making high
+quality software to the realm of data. This includes practices like test driven
+design, domain modeling, observability, etc. I would also make case that that
+in certain circumstances data engineering also entails building platforms to
+enable economy of scale. (The [Data Mesh][1] architecture is a great example of
+how to do this elegantly)
+
+So now we have a bit more of an understanding of what data engineers are
+responsible for, lets explore some of reasons you might consider pursuing it as
+a role. Here are some of the things that motivated me.
+
+1. Close to the domain
+
+   Unlike my previous role as an infrastructure engineer\*, data engineering
+   fully immerses you into whatever domain you are operating in. Calculating
+   sales forecast for a supermarket? You are probably about to learn a fair bit
+   about the economics of avocados. Building data services to plan journeys?
+   You run the risk of eventually becoming somewhat of a train geek.  
+
+   Every dataset has its own quirks. For example, while working with in
+   automotive retail I uncovered some quite interesting "rare colours" of car.
+   (i.e. colours that only appear once in a dataset of several million cars)  I
+   was amused to discover that car manufacturers would do things like describe
+   a completely unremarkable SUV as being "Mystic Beige".
+
+   I love finding weird outliers in the dataset and thinking, _"what on earth
+   happened here?"_ Working in data is rewarding for those who are fundamentally
+   very curious.
+
+   Also, its gratifying to see users glean insights from data you have
+   delivered to them. This is great, both because its a valuable form of
+   feedback, but also but its easy to see the impact of your work.
+
+
+   \* Big respect for infra-devs, this work is super valuable, sometimes under appreciated and so so important to get right.
+
+2. But still close to the metal
+
+   Bork bork bork
+
+3. In demand
+
+   Ha ha ha
+
+4. Lots of room for innovation
+
+   Yay yay yay
+
+TODO: Talk about forgoing expensive vendor stuff.
+
+What I like about focusing on end outcome, is we can be quite opened minded
+about our approach to building solutions. For example:
 
 - Maybe data engineering is less about owning _all the pipelines_ and instead
   finding ways to empower developers to better shape the data flowing from
@@ -86,9 +131,8 @@ So, what makes this a compelling discipline to invest in?
 
 *Lots of room for innovation.*
 
-[Data Mesh](https://martinfowler.com/articles/data-monolith-to-mesh.html)
 Rust
 Arrow
 
 
-
+[1]: https://martinfowler.com/articles/data-monolith-to-mesh.html
