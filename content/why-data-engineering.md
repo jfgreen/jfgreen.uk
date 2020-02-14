@@ -72,28 +72,30 @@ a role. Here are some of the things that motivated me.
 
 1. Close to the domain
 
-   Unlike my previous role as an infrastructure engineer\*, data engineering
+   Unlike my previous role as an infrastructure developer\*, data engineering
    fully immerses you into whatever domain you are operating in. Calculating
    sales forecast for a supermarket? You are probably about to learn a fair bit
-   about the economics of avocados. Building data services to plan journeys?
-   You run the risk of eventually becoming somewhat of a train geek.  
+   about the economics of avocados. Building a routing service to plan
+   journeys? You run the risk of eventually becoming somewhat of a train geek.  
 
    Every dataset has its own quirks. For example, while working with in
    automotive retail I uncovered some quite interesting "rare colours" of car.
-   (i.e. colours that only appear once in a dataset of several million cars)  I
-   was amused to discover that car manufacturers would do things like describe
-   a completely unremarkable SUV as being "Mystic Beige".
+   (i.e. colours that only appear once in a dataset of several million cars).
+   I was amused to discover that car manufacturers would do things like
+   describe a completely unremarkable SUV as being "Mystic Beige".
 
-   I love finding weird outliers in the dataset and thinking, _"what on earth
-   happened here?"_ Working in data is rewarding for those who are fundamentally
-   very curious.
+   I love finding a weird outlier in the dataset and trying to the story behind
+   it. _"What on earth happened here, did a single customer really order 187
+   mangos?"_ Working in data is rewarding for those who are fundamentally very
+   curious.
 
    Also, its gratifying to see users glean insights from data you have
    delivered to them. This is great, both because its a valuable form of
    feedback, but also but its easy to see the impact of your work.
 
 
-   \* Big respect for infra-devs, this work is super valuable, sometimes under appreciated and so so important to get right.
+   \* _Big respect for infra-devs, this work is super valuable, sometimes under
+   appreciated and so so important to get right._
 
 2. But still close to the metal
 
