@@ -26,14 +26,14 @@ role with newfound enthusiasm.
 The goal of this post was to share with you why I think data engineering is a
 pretty exciting discipline. But, truth be told, as I starting writing I had a
 minor identity crisis around what exactly my role as a data engineer should
-entail, so first, lets explore some definitions. 
+entail, so first, lets explore some definitions.
 
 Data engineers have been variously described as being responsible for:
 
 - Building and maintaining data pipelines.
 - Ensuring data is clean, reliable and accessible.
 - Using distributed computing to solve data intensive problems.
-- Working with data scientists to deploy machine learning solutions. 
+- Working with data scientists to deploy machine learning solutions.
 
 Is this a fair characterisation? Well, sort of. The above responsibilities do
 describe activities that both myself and colleagues of mine have carried out
@@ -76,7 +76,7 @@ a role. Here are some of the things that motivated me.
    fully immerses you into whatever domain you are operating in. Calculating
    sales forecast for a supermarket? You are probably about to learn a fair bit
    about the economics of avocados. Building a routing service to plan
-   journeys? You run the risk of eventually becoming somewhat of a train geek.  
+   journeys? You run the risk of eventually becoming somewhat of a train geek.
 
    Every dataset has its own quirks. For example, while working with in
    automotive retail I uncovered some quite interesting "rare colours" of car.
@@ -140,44 +140,36 @@ a role. Here are some of the things that motivated me.
    Even when performance isn't as much of a concern, there are still compelling
    economical and ecological arguments to be made for being at least mindful of
    this and writing software that uses less resources.
-   
 
-3. In demand
+3. Lots of room for innovation
 
-   Ha ha ha
+   The other main reason I want investing data engineering is that
+   there the entire "data" field continues to have lots of interesting
+   developments.
 
-4. Lots of room for innovation
+   There focused but useful tools such as [DBT][4] that help compose data
+   transformations. There are projects like [Apache Arrow][5] which aim to
+   establish a solid foundations for the interplay of data between different
+   technologies in the data ecosystem. We have programming languages such as
+   Rust that demonstrate a [lot of potential for solving data intensive
+   problems][6].
 
-   Yay yay yay
+   There are exciting happenings in the ops space that could be beneficial to
+   experiment with. For example, instrumenting data pipelines for
+   [observability][7]. We are also starting to see examples of how to do
+   [continuous delivery for machine learning][8].
 
-TODO: Talk about forgoing expensive vendor stuff.
+   Beyond just technology, the shape of collaboration is evolving also. Instead
+   of having a central team who manges pipelines, many are now embedding data
+   data engineers in product teams.
 
-What I like about focusing on end outcome, is we can be quite opened minded
-about our approach to building solutions. For example:
-
-- Maybe data engineering is less about owning _all the pipelines_ and instead
-  finding ways to empower developers to better shape the data flowing from
-  their products.
-- Perhaps instead of struggling to "clean" data, we focus on using domain
-  driven design techniques to ensure data is coherently mapped from one domain
-  to another.
-- Could we solve the problem with a small python script instead of a
-  distributed computing framework?
-
-So, what makes this a compelling discipline to invest in?
-
-*Close to the domain.*
-
-*But still close to the metal.*
-
-*Increasingly in demand.*
-
-*Lots of room for innovation.*
-
-Rust
-Arrow
-
+If you read this far, you can probably see I am optimistic about diving into all things data!
 
 [1]: https://martinfowler.com/articles/data-monolith-to-mesh.html
 [2]: https://mechanical-sympathy.blogspot.com
 [3]: https://gist.github.com/hellerbarde/2843375
+[4]: https://www.getdbt.com
+[5]: https://arrow.apache.org
+[6]: https://andygrove.io/2018/01/rust-is-for-big-data/
+[7]: https://docs.honeycomb.io/learning-about-observability/intro-to-observability/
+[8]: https://martinfowler.com/articles/cd4ml.html
