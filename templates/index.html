@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-gb">
-	<head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Friendly Engineering Blog">
-        <meta name="author" content="{{ config.extra.author }}">
-        <title>{{ config.title }}</title>
-        <link href="{{ get_url(path="rss.xml") }}" rel="alternate" type="application/rss+xml" title="{{ config.title }}" />
-	</head>
+{% extends "base.html" %}
+
+{% block head %}
+    <title>{{ config.title }}</title>
+    <meta name="description" content="Friendly Engineering Blog">
+{% endblock head %}
+
+{% block body %}
     <body>
         <header>
             <h1>Friendly Engineering</h1>
@@ -20,7 +19,7 @@
         </main>
         <footer>
             <hr/>
-            <a href="https://twitter.com/j_f_green" target="_blank">@j_f_green</a>
+            <a href="https://twitter.com/j_f_green">@j_f_green</a>
         </footer>
     </body>
-</html>
+{% endblock body %}

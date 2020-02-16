@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="{{ config.extra.author }}">
+        <link rel="stylesheet" href="{{ get_url(path='style.css') }}" />
+        <link href="{{ get_url(path='rss.xml') }}" rel="alternate" type="application/rss+xml" title="{{ config.title }}" />
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

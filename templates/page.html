@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en-gb">
-	<head>
-        <meta charset="UTF-8">
-        <meta name="description" content="{{  page.description  }}">
-        <meta name="author" content="{{ config.extra.author }}">
-        <title>{{ page.title }}</title>
-        <link href="{{ get_url(path="rss.xml") }}" rel="alternate" type="application/rss+xml" title="{{ config.title }}" />
-	</head>
-    <body>
-        {{ page.content | safe}}
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block head %}
+    <meta name="description" content="{{ page.description }}">
+    <title>{{ page.title }}</title>
+{% endblock head %}
+
+{% block body %}
+    <h1>{{ page.title | safe }}</h1>
+    <h2>{{ page.description | safe }}</h2>
+    <p>{{ page.date | date(format="%Y-%m-%d") }}</p>
+    <hr />
+    {{ page.content | safe}}
+{% endblock body %}

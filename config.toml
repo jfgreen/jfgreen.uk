@@ -2,6 +2,7 @@ title = "Friendly Engineering"
 base_url = "https://friendly.engineering"
 
 generate_rss = true
+compile_sass = true
 
 [extra]
 author="James Green"
