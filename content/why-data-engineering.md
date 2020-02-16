@@ -1,10 +1,9 @@
 +++
 title = "The value and opportunity of Data Engineering "
-description = "What is data engineering, why is it valuable, and where are its exciting frontiers?"
+description = "What is data engineering, why is it valuable, and what makes it interesting?"
 category = "Data"
 tags = ["data engineering"]
-date = 2020-02-02
-draft=true
+date = 2020-02-16
 +++
 
 A few years ago a colleague of mine explained to me how, when asked about his
@@ -22,6 +21,8 @@ While this is not the first time I have held the data engineering job title,
 working in tech consulting has broadened my horizons on the various challenges
 folks have getting value from there data and I find myself returning to the
 role with newfound enthusiasm.
+
+### The Value of Data Engineering
 
 The goal of this post was to share with you why I think data engineering is a
 pretty exciting discipline. But, truth be told, as I starting writing I had a
@@ -66,102 +67,100 @@ in certain circumstances data engineering also entails building platforms to
 enable economy of scale. (The [Data Mesh][1] architecture is a great example of
 how to do this elegantly)
 
+### The Opportunity of Data Engineering
+
 So now we have a bit more of an understanding of what data engineers are
 responsible for, lets explore some of reasons you might consider pursuing it as
 a role. Here are some of the things that motivated me.
 
-1. Close to the domain
+#### Close to the domain
 
-   Unlike my previous role as an infrastructure developer\*, data engineering
-   fully immerses you into whatever domain you are operating in. Calculating
-   sales forecast for a supermarket? You are probably about to learn a fair bit
-   about the economics of avocados. Building a routing service to plan
-   journeys? You run the risk of eventually becoming somewhat of a train geek.
+Unlike my previous role as an infrastructure developer\*, data engineering
+fully immerses you into whatever domain you are operating in. Calculating sales
+forecast for a supermarket? You are probably about to learn a fair bit about
+the economics of avocados. Building a routing service to plan journeys? You run
+the risk of eventually becoming somewhat of a train geek.
 
-   Every dataset has its own quirks. For example, while working with in
-   automotive retail I uncovered some quite interesting "rare colours" of car.
-   (i.e. colours that only appear once in a dataset of several million cars).
-   I was amused to discover that car manufacturers would do things like
-   describe a completely unremarkable SUV as being "Mystic Beige".
+Every dataset has its own quirks. For example, while working with in automotive
+retail I uncovered some quite interesting "rare colours" of car. (i.e. colours
+that only appear once in a dataset of several million cars). I was amused to
+discover that car manufacturers would do things like describe a completely
+unremarkable SUV as being "Mystic Beige".
 
-   I love finding a weird outlier in the dataset and trying to the story behind
-   it. _"What on earth happened here, did a single customer really order 187
-   mangos?"_ Working in data is rewarding for those who are fundamentally very
-   curious.
+I love finding a weird outlier in the dataset and trying to the story behind
+it. _"What on earth happened here, did a single customer really order 187
+mangos?"_ Working in data is rewarding for those who are fundamentally very
+curious.
 
-   Also, its gratifying to see users glean insights from data you have
-   delivered to them. This is great, both because its a valuable form of
-   feedback, but also but its easy to see the impact of your work.
+Also, its gratifying to see users glean insights from data you have delivered
+to them. This is great, both because its a valuable form of feedback, but also
+but its easy to see the impact of your work.
 
 
-   \* _Big respect for infra-devs, this work is super valuable, sometimes under
-   appreciated and so so vital to get right._
+\* _Big respect for infra-devs, this work is super valuable, sometimes under
+appreciated and so so vital to get right._
 
-2. But still close to the metal
+#### But still close to the metal
 
-   Ultimately, all data, whether the colour of a car, or a count of mangos
-   sold, is stored a series of bit and bytes in one or more computers. While I
-   enjoy indulging in the aforementioned data-curiosity, I also find a lot of
-   satisfaction in learning about the lower-level mechanics of how these values
-   move about the computer. Not always, but often enough, having some
-   appreciation of this can also be particularly important when designing and
-   implementing data solutions.
+Ultimately, all data, whether the colour of a car, or a count of mangos sold,
+is stored a series of bit and bytes in one or more computers. While I enjoy
+indulging in the aforementioned data-curiosity, I also find a lot of
+satisfaction in learning about the lower-level mechanics of how these values
+move about the computer. Not always, but often enough, having some appreciation
+of this can also be particularly important when designing and implementing data
+solutions.
 
-   There are all sorts of cases where this applies. Maybe the data is big,
-   maybe the data is small but computationally expensive. Perhaps the data
-   needs to be fetched from a distant machine running a strange and arcane
-   legacy system. In these situations where performance starts to matter we
-   need to pay attention to how the shape of the problem we are solving
-   intersects with the strength and weaknesses of the hardware we are building
-   on top of.
+There are all sorts of cases where this applies. Maybe the data is big, maybe
+the data is small but computationally expensive. Perhaps the data needs to be
+fetched from a distant machine running a strange and arcane legacy system. In
+these situations where performance starts to matter we need to pay attention to
+how the shape of the problem we are solving intersects with the strength and
+weaknesses of the hardware we are building on top of.
 
-   This concept of designing software to take into account the design of the
-   underlying hardware is sometimes expressed as "mechanical sympathy". This
-   term was popularised by [Martin Thompson][2] and attributed it to the
-   Formula 1 racing champion Jackie Stewart, who "believed the best drivers had
-   enough understanding of how a machine worked so they could work in harmony
-   with it".
+This concept of designing software to take into account the design of the
+underlying hardware is sometimes expressed as "mechanical sympathy". This term
+was popularised by [Martin Thompson][2] and attributed it to the Formula 1
+racing champion Jackie Stewart, who "believed the best drivers had enough
+understanding of how a machine worked so they could work in harmony with it".
 
-   We can use this principal to guide many of the design choices we make when
-   coming up with solution. For instance:
+We can use this principal to guide many of the design choices we make when
+coming up with solution. For instance:
 
-   - Data locality and [latency][3]: Are we fetching data from the CPU cache,
-     memory, disk or network?
-   - Memory vs computer trade-off: It is more efficient to pre-calculate values
-     at the cost of use more memory?
-   - Parallelism: Would this be faster if we took advantage of more CPU cores?
-   - Data oriented programming: Should my collection of data be represented as
-     an array of structs, or a struct of arrays? Would vectorisation be faster?
-   - Database choice: Is this database technology designed for analytical
-     workloads. What indexes should we use?
-   - Lazy evaluation: Can we process the data as a stream instead of loading
-     the entire data set at once?
+- Data locality and [latency][3]: Are we fetching data from the CPU cache,
+  memory, disk or network?
+- Memory vs computer trade-off: It is more efficient to pre-calculate values at
+  the cost of use more memory?
+- Parallelism: Would this be faster if we took advantage of more CPU cores?
+- Data oriented programming: Should my collection of data be represented as an
+  array of structs, or a struct of arrays? Would vectorisation be faster?
+- Database choice: Is this database technology designed for analytical
+  workloads. What indexes should we use?
+- Lazy evaluation: Can we process the data as a stream instead of loading the
+  entire data set at once?
 
-   Even when performance isn't as much of a concern, there are still compelling
-   economical and ecological arguments to be made for being at least mindful of
-   this and writing software that uses less resources.
+Even when performance isn't as much of a concern, there are still compelling
+economical and ecological arguments to be made for being at least mindful of
+this and writing software that uses less resources.
 
-3. Lots of room for innovation
+#### Room for innovation
 
-   The other main reason I want investing data engineering is that
-   there the entire "data" field continues to have lots of interesting
-   developments.
+The other main reason I want investing data engineering is that there the
+entire "data" field continues to have lots of interesting developments.
 
-   There focused but useful tools such as [DBT][4] that help compose data
-   transformations. There are projects like [Apache Arrow][5] which aim to
-   establish a solid foundations for the interplay of data between different
-   technologies in the data ecosystem. We have programming languages such as
-   Rust that demonstrate a [lot of potential for solving data intensive
-   problems][6].
+There focused but useful tools such as [DBT][4] that help compose data
+transformations. There are projects like [Apache Arrow][5] which aim to
+establish a solid foundations for the interplay of data between different
+technologies in the data ecosystem. We have programming languages such as Rust
+that demonstrate a [lot of potential for solving data intensive problems][6].
 
-   There are exciting happenings in the ops space that could be beneficial to
-   experiment with. For example, instrumenting data pipelines for
-   [observability][7]. We are also starting to see examples of how to do
-   [continuous delivery for machine learning][8].
+There are exciting happenings in the ops space that could be beneficial to
+experiment with. For example, instrumenting data pipelines for
+[observability][7]. We are also starting to see examples of how to do
+[continuous delivery for machine learning][8].
 
-   Beyond just technology, the shape of collaboration is evolving also. Instead
-   of having a central team who manges pipelines, many are now embedding data
-   data engineers in product teams.
+Beyond just technology, the shape of collaboration is evolving also. Instead of
+having a central team who manges pipelines, many are now embedding data data
+engineers in product teams.
 
 If you read this far, you can probably see I am optimistic about diving into all things data!
 
