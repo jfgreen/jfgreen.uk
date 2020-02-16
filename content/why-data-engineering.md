@@ -95,11 +95,52 @@ a role. Here are some of the things that motivated me.
 
 
    \* _Big respect for infra-devs, this work is super valuable, sometimes under
-   appreciated and so so important to get right._
+   appreciated and so so vital to get right._
 
 2. But still close to the metal
 
-   Bork bork bork
+   Ultimately, all data, whether the colour of a car, or a count of mangos
+   sold, is stored a series of bit and bytes in one or more computers. While I
+   enjoy indulging in the aforementioned data-curiosity, I also find a lot of
+   satisfaction in learning about the lower-level mechanics of how these values
+   move about the computer. Not always, but often enough, having some
+   appreciation of this can also be particularly important when designing and
+   implementing data solutions.
+
+   There are all sorts of cases where this applies. Maybe the data is big,
+   maybe the data is small but computationally expensive. Perhaps the data
+   needs to be fetched from a distant machine running a strange and arcane
+   legacy system. In these situations where performance starts to matter we
+   need to pay attention to how the shape of the problem we are solving
+   intersects with the strength and weaknesses of the hardware we are building
+   on top of.
+
+   This concept of designing software to take into account the design of the
+   underlying hardware is sometimes expressed as "mechanical sympathy". This
+   term was popularised by [Martin Thompson][2] and attributed it to the
+   Formula 1 racing champion Jackie Stewart, who "believed the best drivers had
+   enough understanding of how a machine worked so they could work in harmony
+   with it".
+
+   We can use this principal to guide many of the design choices we make when
+   coming up with solution. For instance:
+
+   - Data locality and [latency][3]: Are we fetching data from the CPU cache,
+     memory, disk or network?
+   - Memory vs computer trade-off: It is more efficient to pre-calculate values
+     at the cost of use more memory?
+   - Parallelism: Would this be faster if we took advantage of more CPU cores?
+   - Data oriented programming: Should my collection of data be represented as
+     an array of structs, or a struct of arrays? Would vectorisation be faster?
+   - Database choice: Is this database technology designed for analytical
+     workloads. What indexes should we use?
+   - Lazy evaluation: Can we process the data as a stream instead of loading
+     the entire data set at once?
+
+   Even when performance isn't as much of a concern, there are still compelling
+   economical and ecological arguments to be made for being at least mindful of
+   this and writing software that uses less resources.
+   
 
 3. In demand
 
@@ -138,3 +179,5 @@ Arrow
 
 
 [1]: https://martinfowler.com/articles/data-monolith-to-mesh.html
+[2]: https://mechanical-sympathy.blogspot.com
+[3]: https://gist.github.com/hellerbarde/2843375
