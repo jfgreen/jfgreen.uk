@@ -6,7 +6,7 @@ tags = ["data engineering"]
 date = 2020-02-16
 +++
 
-A few years ago a colleague of mine explained to me how, when asked about his
+A few years ago a colleague of mine explained how, when asked about his
 role, he would glibly respond, "I do things with computers". At the time this
 sounded fairly reasonable. I too have fun doing things with computers and will
 always consider myself something of a generalist technologist.
@@ -23,9 +23,9 @@ newfound enthusiasm.
 ### Distilling Data & Enabling Decision Making
 
 The goal of this post was to share with you why I think data engineering is a
-pretty exciting discipline. But, truth be told, as I started writing I had a
-minor identity crisis around what exactly my role as a data engineer should
-entail. So first let's explore some definitions.
+pretty exciting discipline. And that remains the case. But, truth be told, as I
+started writing I had a minor identity crisis as to what exactly my role as a
+data engineer should entail. So I had a go at exploring some definitions.
 
 Data engineers are variously described as being responsible for:
 
@@ -49,7 +49,7 @@ Ultimately, it's a lot easier to demonstrate value when you empower people to
 confidently make a decision, or at the very least, reduce uncertainty. I
 wouldn't even suggest we necessarily need super sophisticated techniques to do
 so. Never underestimate the power in having the right data in the right
-place, with even some super basic analysis.
+place, with some basic analysis.
 
 
 This definition could also perhaps apply to data science, but I think that's
@@ -69,19 +69,19 @@ elegantly.)
 
 So now we have a bit more of an understanding as to what data engineers are
 responsible for, let's explore some of reasons you might consider pursuing it as
-a skill. Here are some of the things that motivated me.
+a skill. Here are some things that motivated me.
 
 #### Close to the domain
 
 Unlike my previous role as an infrastructure developer\*, data engineering
-fully immerses within a particular domain. Calculating sales forecast for a
+fully immerses you within a particular domain. Calculating sales forecast for a
 supermarket? You are probably going to learn a fair bit about the economics of
 avocados. Building a routing service to plan journeys? You run the risk of
 eventually becoming something of a train geek.
 
 Every dataset has its own quirks. For example, while working within automotive
-retail I uncovered some quite interesting "rare colours" of car. (i.e. colours
-that only appear once in a dataset of several million cars). I was amused to
+retail I uncovered some quite interesting 'rare colours' of car (colours that
+only appear once in a dataset of several million cars). I was amused to
 discover that car manufacturers would do things like describe a completely
 unremarkable SUV as being "Mystic Beige" - definitely an oxymoron.
 
@@ -162,7 +162,7 @@ product teams.
 
 ### Being excited about data
 
-If you've read this far, you can see I'm optimistic about diving into
+If you've read this far, you can see I'm enthusiastic about diving into
 all things data. My plan is to keep writing data-related articles on this
 blog, and I will have some interesting topics to share in due course.
 
