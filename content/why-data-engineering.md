@@ -12,22 +12,22 @@ with computers". At the time this sounded fairly reasonable. I too have fun
 doing things with computers and will always consider myself somewhat of a
 generalist technologist.
 
-However, out of all the projects I have worked on, I have begun to realise that
-it's the ones that are in some way data intensive that particularly hold my
+However, out of all the projects I have worked on, I have begun to realise 
+it's the data intensive ones that particularly hold my
 interest. After some thought I have decided to embrace this and take on data
 engineering as a full time role.
 
-While this is not the first time I have held the this job title, working in
+While this is not the first time I have held this job title, working in
 tech consulting has broadened my horizons on the various challenges folks have
-getting value from there data and I find myself returning to the role with
+getting value from their data and I find myself returning to the role with
 newfound enthusiasm.
 
 ### Distilling Data & Enabling Decision Making
 
 The goal of this post was to share with you why I think data engineering is a
-pretty exciting discipline. But, truth be told, as I starting writing I had a
+pretty exciting discipline. But, truth be told, as I started writing I had a
 minor identity crisis around what exactly my role as a data engineer should
-entail. So first, lets explore some definitions.
+entail. So first, let's explore some definitions.
 
 Data engineers have been variously described as being responsible for:
 
@@ -37,40 +37,40 @@ Data engineers have been variously described as being responsible for:
 - Working with data scientists to deploy machine learning solutions.
 
 Is this a fair characterisation? Well, sort of. The above responsibilities do
-describe activities that both myself and colleagues of mine have carried out
-while working on data projects. However, this explanation doesn't really touch
-on  _why_ we do this work. Why do we build pipelines, optimise queries and
-scale out clusters? To what end are we working towards? Here is my attempt as
+describe activities that both myself and colleagues have carried out while
+working on data projects. However, this explanation doesn't really touch on
+_why_ we do this work. Why do we build pipelines, optimise queries and scale
+out clusters? What end are we working towards? Here is my attempt at
 defining data engineering in terms of what it enables.
 
 > The practice of building software that can reliably distill data into a
 > meaningful form, such that a human or machine can easily make a decision
 > and/or take an action.
 
-Ultimately, it's a lot easier to demonstrate value when you make people feel
-empowered to confidently make a decision, or at the very least, reduce
-uncertainty. I wouldn't even suggest we necessarily need super sophisticated
-techniques to do so either. Never underestimate the power in having the right
-data in the right place, with even some super basic analysis.
+Ultimately, it's a lot easier to demonstrate value when you empower people to
+confidently make a decision, or at the very least, reduce uncertainty. I
+wouldn't even suggest we necessarily need super sophisticated techniques to do
+so either. Never underestimate the power in having the right data in the right
+place, with even some super basic analysis.
 
 
 This definition is could also perhaps apply to data science, but I think that's
 OK given the highly complementary nature of these two roles. In fact, as a
-colleague of mine helpfully pointed out, if the act of "distilling data" is is
-orthogonal (i.e not exclusive to engineers or scientists), then the role
-of the data engineer is about doing so with a focus on reliability, data
-quality and data availability. I agree with this and think a key enabler for
-doing so is to bring all the principals we know and love about making high
-quality software to the realm of data. This includes practices like test driven
-development, domain modeling, observability, etc. I would also make case that that
-in certain circumstances it also entails building platforms to enable economy
-of scale. (The [Data Mesh][1] architecture is a great example of how to do this
+colleague of mine helpfully pointed out, if the act of "distilling data" is
+orthogonal (i.e not exclusive to engineers or scientists), then the role of the
+data engineer is about doing so with a focus on reliability, data quality and
+data availability. I agree with this and think a key enabler for doing so is to
+bring all the principles we know and love about making high quality software to
+the realm of data. This includes practices like test driven development, domain
+modeling, observability, etc. I would also make the case that in certain
+circumstances it also entails building platforms to enable economy of scale.
+(The [Data Mesh][1] architecture is a great example of how to do this
 elegantly)
 
 ### Reasons to Like Data Engineering
 
 So now we have a bit more of an understanding of what data engineers are
-responsible for, lets explore some of reasons you might consider pursuing it as
+responsible for, let's explore some of reasons you might consider pursuing it as
 a role. Here are some of the things that motivated me.
 
 #### Close to the domain
@@ -79,9 +79,9 @@ Unlike my previous role as an infrastructure developer\*, data engineering
 fully immerses you into whatever domain you are operating in. Calculating sales
 forecast for a supermarket? You are probably about to learn a fair bit about
 the economics of avocados. Building a routing service to plan journeys? You run
-the risk of eventually becoming somewhat of a train geek.
+the risk of eventually becoming something of a train geek.
 
-Every dataset has its own quirks. For example, while working with in automotive
+Every dataset has its own quirks. For example, while working within automotive
 retail I uncovered some quite interesting "rare colours" of car. (i.e. colours
 that only appear once in a dataset of several million cars). I was amused to
 discover that car manufacturers would do things like describe a completely
@@ -89,12 +89,12 @@ unremarkable SUV as being "Mystic Beige".
 
 I love finding a weird outlier in the dataset and trying to uncover the story
 behind it. _"What on earth happened here, did a single customer really order
-187 mangos?"_ Working in data is rewarding for those who are fundamentally very
+187 mangos?"._ Working in data is rewarding for those who are fundamentally very
 curious.
 
-Also, its gratifying to see users glean insights from data you have delivered
+Also, it's gratifying to see users glean insights from data you have delivered
 to them. This is great, both because its a valuable form of feedback, but also
-but its easy to see the impact of your work.
+because it's easy to see the impact of your work.
 
 
 \* _Big respect for infra-devs, this work is super valuable, sometimes under
@@ -131,10 +131,10 @@ coming up with solutions. For instance:
 - Memory vs compute trade-off: It is more efficient to pre-calculate values at
   the cost of using more memory?
 - Parallelism: Would this be faster if we took advantage of more CPU cores?
-- Data oriented programming: Should my collection of data be represented as an
+- Data-oriented programming: Should my collection of data be represented as an
   array of structs, or a struct of arrays? Would vectorisation be faster?
 - Database choice: Is this database technology designed for analytical
-  workloads. What indexes should we use?
+  workloads? What indexes should we use?
 - Lazy evaluation: Can we process the data as a stream instead of loading the
   entire data set at once?
 
@@ -144,12 +144,12 @@ this and writing software that uses less resources.
 
 #### Room for innovation
 
-The other main reason I want to investing data engineering is that there the
+The other main reason I want to invest in data engineering is that the
 entire "data" field continues to have lots of interesting developments.
 
 There are focused but useful tools such as [DBT][4] that help compose data
 transformations. There are projects like [Apache Arrow][5] which aim to
-establish a solid foundations for the interplay of data between different
+establish solid foundations for the interplay of data between different
 technologies in the open source ecosystem. We have programming languages such
 as Rust that demonstrate a [lot of potential for solving data intensive
 problems][6].
@@ -160,7 +160,7 @@ experiment with. For example, instrumenting data pipelines for
 [continuous delivery for machine learning][8].
 
 Beyond just technology, the shape of collaboration is evolving also. Instead of
-having a central team who manages pipelines, many are now embedding data data
+having a central team who manages pipelines, many are now embedding data
 engineers in product teams.
 
 ### Being excited about data
@@ -169,7 +169,7 @@ If you read this far, you can probably see I am optimistic about diving into
 all things data! My plan is to keep writing about data related topics on this
 blog, so hopefully I will have some interesting things to share in due course.
 
-Lets see what the next decade brings for data engineering and software
+Let's see what the next decade brings for data engineering and software
 development. Exciting times!
 
 
