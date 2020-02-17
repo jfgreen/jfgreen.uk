@@ -1,6 +1,6 @@
 +++
 title = "The Value of Data Engineering "
-description = "The who, what and why of pipelines, persistence, and platforms."
+description = "The who, what and why of pipelines, persistence and platforms."
 category = "Data"
 tags = ["data engineering"]
 date = 2020-02-16
@@ -41,7 +41,7 @@ describe activities that both myself and colleagues of mine have carried out
 while working on data projects. However, this explanation doesn't really touch
 on  _why_ we do this work. Why do we build pipelines, optimise queries and
 scale out clusters? To what end are we working towards? Here is my attempt as
-defining data engineering in terms what it enables.
+defining data engineering in terms of what it enables.
 
 > The practice of building software that can reliably distill data into a
 > meaningful form, such that a human or machine can easily make a decision
@@ -62,7 +62,7 @@ of the data engineer is about doing so with a focus on reliability, data
 quality and data availability. I agree with this and think a key enabler for
 doing so is to bring all the principals we know and love about making high
 quality software to the realm of data. This includes practices like test driven
-design, domain modeling, observability, etc. I would also make case that that
+development, domain modeling, observability, etc. I would also make case that that
 in certain circumstances it also entails building platforms to enable economy
 of scale. (The [Data Mesh][1] architecture is a great example of how to do this
 elegantly)
@@ -87,9 +87,9 @@ that only appear once in a dataset of several million cars). I was amused to
 discover that car manufacturers would do things like describe a completely
 unremarkable SUV as being "Mystic Beige".
 
-I love finding a weird outlier in the dataset and trying to the story behind
-it. _"What on earth happened here, did a single customer really order 187
-mangos?"_ Working in data is rewarding for those who are fundamentally very
+I love finding a weird outlier in the dataset and trying to uncover the story
+behind it. _"What on earth happened here, did a single customer really order
+187 mangos?"_ Working in data is rewarding for those who are fundamentally very
 curious.
 
 Also, its gratifying to see users glean insights from data you have delivered
@@ -103,7 +103,7 @@ appreciated and so so vital to get right._
 #### But still close to the metal
 
 Ultimately, all data, whether the colour of a car, or a count of mangos sold,
-is stored a series of bit and bytes in one or more computers. While I enjoy
+is stored as a series of bit and bytes in one or more computers. While I enjoy
 indulging in the aforementioned data-curiosity, I also find a lot of
 satisfaction in learning about the lower-level mechanics of how these values
 move about the computer. Not always, but often enough, having some appreciation
@@ -114,22 +114,22 @@ There are all sorts of cases where this applies. Maybe the data is big, maybe
 the data is small but computationally expensive. Perhaps the data needs to be
 fetched from a distant machine running a strange and arcane legacy system. In
 these situations where performance starts to matter we need to pay attention to
-how the shape of the problem we are solving intersects with the strength and
+how the shape of the problem we are solving intersects with the strengths and
 weaknesses of the hardware we are building on top of.
 
 This concept of designing software to take into account the design of the
 underlying hardware is sometimes expressed as "mechanical sympathy". This term
-was popularised by [Martin Thompson][2] and attributed it to the Formula 1
+was popularised by [Martin Thompson][2] and attributed to the Formula 1
 racing champion Jackie Stewart, who "believed the best drivers had enough
 understanding of how a machine worked so they could work in harmony with it".
 
 We can use this principal to guide many of the design choices we make when
-coming up with solution. For instance:
+coming up with solutions. For instance:
 
 - Data locality and [latency][3]: Are we fetching data from the CPU cache,
   memory, disk or network?
-- Memory vs computer trade-off: It is more efficient to pre-calculate values at
-  the cost of use more memory?
+- Memory vs compute trade-off: It is more efficient to pre-calculate values at
+  the cost of using more memory?
 - Parallelism: Would this be faster if we took advantage of more CPU cores?
 - Data oriented programming: Should my collection of data be represented as an
   array of structs, or a struct of arrays? Would vectorisation be faster?
@@ -144,14 +144,15 @@ this and writing software that uses less resources.
 
 #### Room for innovation
 
-The other main reason I want investing data engineering is that there the
+The other main reason I want to investing data engineering is that there the
 entire "data" field continues to have lots of interesting developments.
 
-There focused but useful tools such as [DBT][4] that help compose data
+There are focused but useful tools such as [DBT][4] that help compose data
 transformations. There are projects like [Apache Arrow][5] which aim to
 establish a solid foundations for the interplay of data between different
-technologies in the data ecosystem. We have programming languages such as Rust
-that demonstrate a [lot of potential for solving data intensive problems][6].
+technologies in the open source ecosystem. We have programming languages such
+as Rust that demonstrate a [lot of potential for solving data intensive
+problems][6].
 
 There are exciting happenings in the ops space that could be beneficial to
 experiment with. For example, instrumenting data pipelines for
@@ -159,7 +160,7 @@ experiment with. For example, instrumenting data pipelines for
 [continuous delivery for machine learning][8].
 
 Beyond just technology, the shape of collaboration is evolving also. Instead of
-having a central team who manges pipelines, many are now embedding data data
+having a central team who manages pipelines, many are now embedding data data
 engineers in product teams.
 
 ### Being excited about data
