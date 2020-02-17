@@ -1,6 +1,6 @@
 +++
-title = "The value and opportunity of Data Engineering "
-description = "What is data engineering, why is it valuable, and what makes it interesting?"
+title = "The Value of Data Engineering "
+description = "The who, what and why of pipelines, persistence, and platforms."
 category = "Data"
 tags = ["data engineering"]
 date = 2020-02-16
@@ -17,17 +17,17 @@ it's the ones that are in some way data intensive that particularly hold my
 interest. After some thought I have decided to embrace this and take on data
 engineering as a full time role.
 
-While this is not the first time I have held the data engineering job title,
-working in tech consulting has broadened my horizons on the various challenges
-folks have getting value from there data and I find myself returning to the
-role with newfound enthusiasm.
+While this is not the first time I have held the this job title, working in
+tech consulting has broadened my horizons on the various challenges folks have
+getting value from there data and I find myself returning to the role with
+newfound enthusiasm.
 
-### The Value of Data Engineering
+### Distilling Data & Enabling Decision Making
 
 The goal of this post was to share with you why I think data engineering is a
 pretty exciting discipline. But, truth be told, as I starting writing I had a
 minor identity crisis around what exactly my role as a data engineer should
-entail, so first, lets explore some definitions.
+entail. So first, lets explore some definitions.
 
 Data engineers have been variously described as being responsible for:
 
@@ -38,10 +38,10 @@ Data engineers have been variously described as being responsible for:
 
 Is this a fair characterisation? Well, sort of. The above responsibilities do
 describe activities that both myself and colleagues of mine have carried out
-while working under the umbrella of data engineering. However, this explanation
-doesn't really touch on  _why_ we do this work. Why do we build pipelines,
-optimise queries and scale out clusters? To what end are we working towards?
-Here is my attempt as defining data engineering in terms what it enables.
+while working on data projects. However, this explanation doesn't really touch
+on  _why_ we do this work. Why do we build pipelines, optimise queries and
+scale out clusters? To what end are we working towards? Here is my attempt as
+defining data engineering in terms what it enables.
 
 > The practice of building software that can reliably distill data into a
 > meaningful form, such that a human or machine can easily make a decision
@@ -57,17 +57,17 @@ data in the right place, with even some super basic analysis.
 This definition is could also perhaps apply to data science, but I think that's
 OK given the highly complementary nature of these two roles. In fact, as a
 colleague of mine helpfully pointed out, if the act of "distilling data" is is
-orthogonal (i.e not exclusive to data engineers or scientists), then the role
+orthogonal (i.e not exclusive to engineers or scientists), then the role
 of the data engineer is about doing so with a focus on reliability, data
 quality and data availability. I agree with this and think a key enabler for
 doing so is to bring all the principals we know and love about making high
 quality software to the realm of data. This includes practices like test driven
 design, domain modeling, observability, etc. I would also make case that that
-in certain circumstances data engineering also entails building platforms to
-enable economy of scale. (The [Data Mesh][1] architecture is a great example of
-how to do this elegantly)
+in certain circumstances it also entails building platforms to enable economy
+of scale. (The [Data Mesh][1] architecture is a great example of how to do this
+elegantly)
 
-### The Opportunity of Data Engineering
+### Reasons to Like Data Engineering
 
 So now we have a bit more of an understanding of what data engineers are
 responsible for, lets explore some of reasons you might consider pursuing it as
@@ -162,7 +162,15 @@ Beyond just technology, the shape of collaboration is evolving also. Instead of
 having a central team who manges pipelines, many are now embedding data data
 engineers in product teams.
 
-If you read this far, you can probably see I am optimistic about diving into all things data!
+### Being excited about data
+
+If you read this far, you can probably see I am optimistic about diving into
+all things data! My plan is to keep writing about data related topics on this
+blog, so hopefully I will have some interesting things to share in due course.
+
+Lets see what the next decade brings for data engineering and software
+development. Exciting times!
+
 
 [1]: https://martinfowler.com/articles/data-monolith-to-mesh.html
 [2]: https://mechanical-sympathy.blogspot.com
