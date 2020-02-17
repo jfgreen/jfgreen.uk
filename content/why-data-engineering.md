@@ -7,15 +7,14 @@ date = 2020-02-16
 +++
 
 A few years ago a colleague of mine explained to me how, when asked about his
-role, he would glibly respond with something along the lines of: "i do things
+role, he would glibly respond: "i do things
 with computers". At the time this sounded fairly reasonable. I too have fun
 doing things with computers and will always consider myself somewhat of a
 generalist technologist.
 
-However, out of all the projects I have worked on, I have begun to realise 
-it's the data intensive ones that particularly hold my
-interest. After some thought I have decided to embrace this and take on data
-engineering as a full time role.
+However, having been involved in a variety of projects, I've begun to realise
+it's the data-intensive ones which particularly hold my interest. So I'm now
+embracing this and taking on data engineering as a full time role.
 
 While this is not the first time I have held this job title, working in
 tech consulting has broadened my horizons on the various challenges folks have
@@ -54,7 +53,7 @@ so either. Never underestimate the power in having the right data in the right
 place, with even some super basic analysis.
 
 
-This definition is could also perhaps apply to data science, but I think that's
+This definition could also perhaps apply to data science, but I think that's
 OK given the highly complementary nature of these two roles. In fact, as a
 colleague of mine helpfully pointed out, if the act of "distilling data" is
 orthogonal (i.e not exclusive to engineers or scientists), then the role of the
@@ -77,7 +76,7 @@ a role. Here are some of the things that motivated me.
 
 Unlike my previous role as an infrastructure developer\*, data engineering
 fully immerses you into whatever domain you are operating in. Calculating sales
-forecast for a supermarket? You are probably about to learn a fair bit about
+forecast for a supermarket? You are probably going to learn a fair bit about
 the economics of avocados. Building a routing service to plan journeys? You run
 the risk of eventually becoming something of a train geek.
 
@@ -103,8 +102,8 @@ appreciated and so so vital to get right._
 #### But still close to the metal
 
 Ultimately, all data, whether the colour of a car, or a count of mangos sold,
-is stored as a series of bit and bytes in one or more computers. While I enjoy
-indulging in the aforementioned data-curiosity, I also find a lot of
+is stored as a series of bit and bytes in one or more computers. Whilst I enjoy
+indulging my data-curiosity, I also find a lot of
 satisfaction in learning about the lower-level mechanics of how these values
 move about the computer. Not always, but often enough, having some appreciation
 of this can also be particularly important when designing and implementing data
@@ -123,12 +122,12 @@ was popularised by [Martin Thompson][2] and attributed to the Formula 1
 racing champion Jackie Stewart, who "believed the best drivers had enough
 understanding of how a machine worked so they could work in harmony with it".
 
-We can use this principal to guide many of the design choices we make when
+We can use this principle to guide many of the design choices we make when
 coming up with solutions. For instance:
 
 - Data locality and [latency][3]: Are we fetching data from the CPU cache,
   memory, disk or network?
-- Memory vs compute trade-off: It is more efficient to pre-calculate values at
+- Memory vs compute trade-off: Is is more efficient to pre-calculate values at
   the cost of using more memory?
 - Parallelism: Would this be faster if we took advantage of more CPU cores?
 - Data-oriented programming: Should my collection of data be represented as an
@@ -144,7 +143,7 @@ this and writing software that uses less resources.
 
 #### Room for innovation
 
-The other main reason I want to invest in data engineering is that the
+The other main reason I want to invest in data engineering is because the
 entire "data" field continues to have lots of interesting developments.
 
 There are focused but useful tools such as [DBT][4] that help compose data
@@ -154,7 +153,7 @@ technologies in the open source ecosystem. We have programming languages such
 as Rust that demonstrate a [lot of potential for solving data intensive
 problems][6].
 
-There are exciting happenings in the ops space that could be beneficial to
+There are exciting happenings in the ops space which could be beneficial to
 experiment with. For example, instrumenting data pipelines for
 [observability][7]. We are also starting to see examples of how to do
 [continuous delivery for machine learning][8].
@@ -166,8 +165,8 @@ engineers in product teams.
 ### Being excited about data
 
 If you read this far, you can probably see I am optimistic about diving into
-all things data! My plan is to keep writing about data related topics on this
-blog, so hopefully I will have some interesting things to share in due course.
+all things data! My plan is to keep writing data related articles on this
+blog, and I will have some interesting topics to share in due course.
 
 Let's see what the next decade brings for data engineering and software
 development. Exciting times!
