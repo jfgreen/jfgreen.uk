@@ -151,7 +151,7 @@ is specifically designed to work for our examples and therefore quite
 simplistic. It does not deal with all types of object and doesn't handle
 cyclical data structures.
 
-```
+```python
 import sys
 
 def get_size(root_obj):
@@ -234,7 +234,7 @@ print(total_price)
 
 We can then invoke this script using the `time` utility and measure the
 the ["maximum resident set size"][3] value. This tells us the maximum
-number of kilobytes of memory that was used simultaneously.
+number of bytes of memory that was used simultaneously.
 
 ```
 /usr/bin/time -l dataclass.py 1000000
@@ -261,15 +261,15 @@ compare.
 
 Here are the results for a `count` of 1000000.:
 
-| Representation        | Max RSS (Kilobytes) |
-| --------------------- | ------------------- |
-| Data class            | 226988032           |
-| Data class (slots)    | 113152000           |
-| Class                 | 225234944           |
-| Class (slots)         | 111427584           |
-| Named Tuple           | 127430656           |
-| Typed named tuple     | 128278528           |
-| Dictionary            | 289476608           |
+| Representation        | Max RSS (Bytes) |
+| --------------------- | --------------- |
+| Data class            | 226988032       |
+| Data class (slots)    | 113152000       |
+| Class                 | 225234944       |
+| Class (slots)         | 111427584       |
+| Named Tuple           | 127430656       |
+| Typed named tuple     | 128278528       |
+| Dictionary            | 289476608       |
 
 ### Conclusion
 
