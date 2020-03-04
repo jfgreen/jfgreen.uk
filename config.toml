@@ -4,6 +4,7 @@ base_url = "https://friendly.engineering"
 generate_rss = true
 compile_sass = true
 highlight_code = true
+highlight_theme = "demain"
 
 
 [extra]

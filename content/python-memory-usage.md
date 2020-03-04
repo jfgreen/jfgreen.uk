@@ -99,7 +99,7 @@ from dataclasses import dataclass
 
 @dataclass
 class SlotDataClassFruit:
-    __slots__ = [ 'name', 'price', 'colour' ]
+    __slots__ = ('name', 'price', 'colour')
     name: str
     price: int
     colour: str
@@ -268,7 +268,7 @@ Here are the results for a `count` of 1000000:
 | Data class (slots)    | 113152000       |
 | Class                 | 225234944       |
 | Class (slots)         | 111427584       |
-| Named Tuple           | 127430656       |
+| Named tuple           | 127430656       |
 | Typed named tuple     | 128278528       |
 | Dictionary            | 289476608       |
 
