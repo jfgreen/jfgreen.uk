@@ -8,10 +8,10 @@ draft = true
 +++
 
 
-Recently my colleague and I were using Python to process several GB worth of
-CSV data. We realised this dataset was big enough to be mindful of the overall
-memory usage of our program and there decided to spend some time measuring the
-efficiency of the various different data representations available.
+Recently my [colleague][0] and I were using Python to process several GB worth
+of CSV data. We realised this dataset was big enough for us to be mindful of
+the overall memory usage of our program. We therefore decided to spend some
+time measuring the efficiency of the various data representations available.
 
 We considered representing each data item using a:
 
@@ -24,8 +24,8 @@ We considered representing each data item using a:
 
 ### Dictionary
 
-Very flexible, lacks any explicit expectations around what fields each data
-type should contain.
+Very flexible, lacks any explicit expectations around the fields each datatype
+should contain.
 
 
 ```python
@@ -51,8 +51,8 @@ fruit_as_named_tuple = TupleFruit('mango', 123, 'red')
 
 ### Typed Named Tuple
 
-Named tuple + types. PEP 526 variable annotation syntax makes the type of each
-field clear.
+Named tuple + types. PEP 526 variable annotation syntax makes each field type
+clear.
 
 ```python
 # Typed Named Tuple
@@ -71,7 +71,7 @@ fruit_as_named_typed_tuple = TypedTupleFruit('mango', 123, 'red')
 
 As with the typed named tuple, a data class very clearly lays out the name and
 type of each field. It has quite a rich [API][1] with useful functions for
-converting it to a tuple or a dict.
+conversion to a tuple or dictionary.
 
 ```python
 # Data Class
@@ -145,10 +145,10 @@ fruit_as_slotclass = SlotClassFruit('mango', 123, 'red')
 
 Calling `sys.getsizeof` with any given object will return its size. However,
 only memory directly used by the object is returned, not the memory usage of
-objects it refers to. To solve this we can walk each objects referents, calling
-`getsizeof`, until all objects have been measured. The following implementation
-is specifically designed to work for our examples and therefore quite
-simplistic. It does not deal with all types of object and doesn't handle
+objects it refers to. We can solve this by walking each object's referents,
+calling `getsizeof`, until all objects have been measured. The following
+implementation is specifically designed to work for our examples and therefore
+quite simplistic. It does not deal with all types of object and doesn't handle
 cyclical data structures.
 
 ```python
@@ -176,8 +176,8 @@ def get_size(root_obj):
 
 These results were obtained with Python 3.7.4. Full code is available [here][2].
 
-Before looking at the size of a compound data type, its useful to know how much
-memory the primitive data types alone consume.
+Before looking at the size of a compound data type, it's useful to know how
+much memory the primitive data types alone consume.
 
 | Data    | Size (Bytes)  |
 | ------- | ------------- |
@@ -186,7 +186,8 @@ memory the primitive data types alone consume.
 | 'red'   | 52            |
 | total   | 134           |
 
-We can then measure the size of each representation and calculate the overhead added by each.
+We can then measure the size of each representation and calculate the overhead
+added by each.
 
 | Representation        | Size (Bytes) | Overhead (Bytes) |
 | --------------------- | ------------ | ---------------- |
@@ -205,7 +206,7 @@ While it's informative to measure the bytes consumed by a single data item, a
 more realistic benchmark would be to see how memory usage adds up as multiple
 items are processed.
 
-So instead, lets create a small script that grow a list of items and print the
+So instead lets create a small script that grow a list of items and print the
 sum of the `price` field.
 
 ```python
@@ -232,9 +233,9 @@ total_price = sum((f.price for f in basket))
 print(total_price)
 ```
 
-We can then invoke this script using the `time` utility and measure the
+We can then invoke this script using the `time` utility and measure 
 the ["maximum resident set size"][3] value. This tells us the maximum
-number of bytes of memory that was used simultaneously.
+number of bytes of memory used simultaneously.
 
 ```
 /usr/bin/time -l dataclass.py 1000000
@@ -256,10 +257,10 @@ number of bytes of memory that was used simultaneously.
        288  involuntary context switches
 ```
 
-Given a simmilar program for each of the representation, we can see how they
+Given a similar program for each of the representations, we can see how they
 compare.
 
-Here are the results for a `count` of 1000000.:
+Here are the results for a `count` of 1000000:
 
 | Representation        | Max RSS (Bytes) |
 | --------------------- | --------------- |
@@ -274,14 +275,14 @@ Here are the results for a `count` of 1000000.:
 ### Conclusion
 
 We settled on using `typing.NamedTuple` to represent high volume data, and to
-use the richer `DataClass` for the lower volume results of aggregate.
+use the richer `DataClass` for the lower volume collections.
 
 Whatever your use case, I hope the above measurements help you make an informed
 choice.
 
 ### Bonus: Comparing with Pympler
 
-To validate our findings, lets perform the same analysis using `asizeof` from
+To validate our findings, let's perform the same analysis using `asizeof` from
 the [pympler][4] package.
 
 | Data    | Size (Bytes)  |
@@ -293,9 +294,9 @@ the [pympler][4] package.
 
 
 Interestingly, pyampler reports the strings `'mango'` and `'red'` as consuming
-the same memory, despite being of different lengths.
+the same memory, despite being different lengths.
 
-This is because by default `asize` of will return size measurements aligned to
+This is because by default `asizeof` will return size measurements aligned to
 multiples of 8. I suspect this is due to assumptions about byte aligned memory
 access.
 
@@ -309,9 +310,10 @@ access.
 | Typed named tuple     | 224          | 80               |
 | Dictionary            | 560          | 416              |
 
-If we disable, then pympler returns the exact same measurements as our home
-made `get_size` function.
+If we disable this behaviour, then pympler returns the exact same measurements
+as our home made `get_size` function.
 
+[0]: https://twitter.com/aiwatko
 [1]: https://docs.python.org/3/library/dataclasses.html
 [2]: https://github.com/jfgreen/python-representation-sizes
 [3]: https://www.gnu.org/software/libc/manual/html_node/Resource-Usage.html
