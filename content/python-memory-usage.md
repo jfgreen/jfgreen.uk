@@ -1,6 +1,6 @@
 +++
 title = "Python Memory Usage"
-description = "Exploring the memory footprint of different python data representations."
+description = "Exploring the memory footprint of different Python data representations."
 category = "Data"
 tags = ["python"]
 date = 2020-03-04
@@ -23,7 +23,7 @@ We considered representing each data item using a:
 
 ### Dictionary
 
-Very flexible, lacks any explicit expectations around the fields each datatype
+Very flexible, lacks any explicit expectations around the fields each item
 should contain.
 
 

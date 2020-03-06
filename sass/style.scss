@@ -15,6 +15,7 @@ p, li {
 
 pre {
     padding: 20px;
+    white-space: pre-wrap;
 }
 
 table {
@@ -42,7 +43,7 @@ code {
     padding: .2em .4em;
 }
 
-code, pre{
+code, pre {
     background-color: #f9f9f9;
     font-size: 0.85em;
     font-family: Consolas,Monaco,"Lucida Console","Lucida Sans Typewriter",monospace;
