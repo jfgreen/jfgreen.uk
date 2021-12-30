@@ -2,19 +2,19 @@
 
 {% block head %}
     <title>{{ config.title }}</title>
-    <meta name="description" content="Friendly Engineering Blog">
+    <meta name="description" content="jfgreen.uk">
 {% endblock head %}
 
 {% block body %}
     <body>
         <header>
-            <h1>Friendly Engineering</h1>
+            <h1>jfgreen.uk</h1>
             <hr/>
         </header>
         <main>
             <ul>
             {% for post in section.pages %}
-                <li><a href="{{ post.permalink }}">{{ post.date | date(format="%Y-%m-%d") }} - {{ post.title }}</a></li>
+                <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
             {% endfor %}
             </ul>
         </main>

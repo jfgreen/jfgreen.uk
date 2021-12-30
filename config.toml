@@ -1,5 +1,5 @@
-title = "Friendly Engineering"
-base_url = "https://friendly.engineering"
+title = "jfgreen.uk"
+base_url = "https://jfgreen.uk"
 
 generate_rss = true
 compile_sass = true

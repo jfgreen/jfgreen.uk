@@ -8,7 +8,6 @@
 {% block body %}
     <h1>{{ page.title | safe }}</h1>
     <h2>{{ page.description | safe }}</h2>
-    <p>{{ page.date | date(format="%Y/%m/%d") }}</p>
     <hr />
     {{ page.content | safe}}
 {% endblock body %}

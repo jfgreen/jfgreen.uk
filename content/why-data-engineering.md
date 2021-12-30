@@ -3,7 +3,6 @@ title = "The Value of Data Engineering "
 description = "The who, what and why of pipelines, persistence and platforms."
 category = "Data"
 tags = ["data engineering"]
-date = 2020-02-16
 +++
 
 A few years ago a colleague of mine explained how, when asked about his

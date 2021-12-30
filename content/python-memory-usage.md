@@ -3,7 +3,6 @@ title = "Python Memory Usage"
 description = "Exploring the memory footprint of different Python data representations."
 category = "Data"
 tags = ["python"]
-date = 2020-03-04
 +++
 
 
